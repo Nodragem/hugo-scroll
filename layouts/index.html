@@ -11,17 +11,17 @@
         <div id="site-head-content" class="inner">
 
             {{ with .Params.game_logo }}<img class="game-title" src={{ . }}>{{ end }}
+            {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
             
             <div class="video-container">
             {{ with .Params.trailer_link }}<iframe class="game-trailer" src={{ . }} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{{ end }}
             </div>
             
-            {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
 
-            <a class='btn site-menu' href='https://store.steampowered.com/app/1402740/The_Prabbits_Happy_Dogfights/'>Wishlist On Steam</a>
             {{ range where $sections ".Params.header_menu" "eq" true }}
-                 <a class='btn site-menu' data-title-anchor='{{ anchorize .Title }}'>{{ .Title }}</a>
+            <a class='btn site-menu {{.Params.tag}}' data-title-anchor='{{ anchorize .Title }}'>{{ .Title }}</a>
             {{ end }}
+            <a class='btn wishlist' href='https://store.steampowered.com/app/1402740/The_Prabbits_Happy_Dogfights/'>Wishlist On Steam</a>
 
             <i id='header-arrow' class="fa fa-angle-down"></i>
         </div>

@@ -183,9 +183,12 @@ a:hover {
   color: #86c440;
 }
 
+
+
 a.btn {
+  border: none;
   text-decoration: none;
-  background-color: #9fd067;
+  background-color:  #8d7373;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   color: white;
@@ -203,8 +206,39 @@ a.btn {
   font-weight: lighter;
 }
 
+.subscribe-btn {
+  border: none;
+  text-decoration: none;
+  background-color:  #782828;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  width: 50%;
+  letter-spacing: 1px;
+  margin: 0;
+  overflow: visible;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.subscribe-btn:hover {
+  background: #511212;
+}
+
+a.beta {
+  background-color:  #782828;
+  margin-right: 0%;
+}
+
 a.btn:hover {
-  background: #86c440;
+  background: #511212;
 }
 
 #header-arrow {
@@ -536,22 +570,61 @@ ul li {
 
 .blog-description {
   margin: 0;
-  font-size: 2.5rem;
+  margin-top: -3%;
+  font-size: 3.5rem;
   line-height: 1.5em;
-  font-weight: 400;
-  font-family: "Roboto Slab", serif;
+  font-weight: 800;
+  font-family: "Gloria Hallelujah", cursive;
   letter-spacing: 0;
+  color: #fff;
+  text-shadow: 1px 2px 2px #2b2a2ab0;
+  -webkit-text-stroke: 2px  #782828;
+  /* animation: blinker 2s linear infinite; */
+}
+@keyframes blinker {
+  50% {
+    color: #fff;
+  }
+}
+
+.mergeRow {
+  font-size: 1.4rem;
+}
+
+.inline-form {
+  margin-top: 2%;
+}
+
+.response {
+  margin-top: 5%;
+  color: rgb(44, 196, 102)
+}
+
+.form-field {
+  width:40%;
+  display: inline-block;
+  color:#782828;
+  
+}
+
+.portrait {
+  border-radius: 50% 50%;
+}
+
+.screenshot {
+  border-radius: 10px 10px;
+  margin-bottom: 100px;
 }
 
 .post-holder {
   width: 100%;
   height: 100%;
-  background: #f2efe8;
+  background: #ECE1D3;
   position: relative;
 }
 .post-holder.odd {
-  background: #b80135;
-  color: white;
+  background: #97827A;
+  color: rgb(233, 222, 222);
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -589,7 +662,7 @@ ul li {
   max-height: 50px !important;
   font-weight: bold;
   background: #fff;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.5)
 }
 
 .fixed-nav img {
@@ -611,10 +684,10 @@ a.fn-item {
   color: white;
 }
 a.fn-item:hover {
-  color: #9fd067;
+  color: #782828;
 }
 a.fn-item.active {
-  color: #86c440;
+  color: #97827A;
   opacity: 1;
 }
 
@@ -861,7 +934,7 @@ a.fn-item.active {
   line-height: 1.5em;
   color: #bbc7cc;
   text-align: center;
-  background: #22343a;
+  background: #423737;
 }
 
 .site-footer a {
