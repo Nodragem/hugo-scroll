@@ -618,11 +618,13 @@ ul li {
 
 .portrait {
   border-radius: 50% 50%;
+  box-shadow: 1px 1px 3px #2e2e2e94;
 }
 
 .screenshot {
   border-radius: 10px 10px;
   margin-bottom: 100px;
+  box-shadow: 3px 3px 3px #2e2e2e94;
 }
 
 .post-holder {
