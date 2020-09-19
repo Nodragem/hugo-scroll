@@ -2,9 +2,10 @@
 {{ $headless := .Site.GetPage "/homepage" }}
 {{ $sections := $headless.Resources.ByType "page" }}
 
-<div class='fixed-nav'>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<nav class='fixed-nav'>
     {{ with .Site.Params.small_logo }}<img src="{{ . | absURL }}" class="menu-icon"/>{{ end }}
-</div>
+</nav>
 
 <header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
     <div class="vertical">

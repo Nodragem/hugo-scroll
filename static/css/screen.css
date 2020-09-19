@@ -511,6 +511,11 @@ ul li {
   background: #b80135 no-repeat center center;
   background-size: cover;
   background-position-y: 0px;
+
+  background-attachment: fixed;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   
 }
 
@@ -578,7 +583,7 @@ ul li {
   letter-spacing: 0;
   color: #fff;
   text-shadow: 1px 2px 2px #2b2a2ab0;
-  -webkit-text-stroke: 2px  #782828;
+  -webkit-text-stroke: 0.1rem  #782828;
   /* animation: blinker 2s linear infinite; */
 }
 @keyframes blinker {
@@ -602,9 +607,13 @@ ul li {
 
 .form-field {
   width:40%;
+  margin-right: 5%;
   display: inline-block;
   color:#782828;
   
+}
+.required {
+  width:100%;
 }
 
 .portrait {
@@ -623,8 +632,9 @@ ul li {
   position: relative;
 }
 .post-holder.odd {
-  background: #97827A;
-  color: rgb(233, 222, 222);
+  background: #88746d;
+
+  color: rgb(250, 235, 235);
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -648,7 +658,7 @@ ul li {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: none;
+  display: block;
   opacity: 1;
   position: fixed;
   top: 0px;
@@ -664,6 +674,7 @@ ul li {
   background: #fff;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.5)
 }
+
 
 .fixed-nav img {
   display: inline;
@@ -1045,6 +1056,7 @@ a.fn-item.active {
   .fixed-nav {
     opacity: 1;
     position: fixed;
+    overflow: hidden;
     top: 0px;
     left: 0px;
     z-index: 99999;
@@ -1121,6 +1133,9 @@ a.fn-item.active {
 @media only screen and (max-width: 500px) {
   .fixed-nav {
     display: none;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
   }
   .post-holder {
     padding-top: 20px;
