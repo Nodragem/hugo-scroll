@@ -509,6 +509,8 @@ ul li {
   text-align: center;
   color: #fff;
   background: #b80135 no-repeat center center;
+  background-color: rgb(192, 192, 192);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position-y: 0px;
 
@@ -635,6 +637,13 @@ ul li {
 }
 .post-holder.odd {
   background: #88746d;
+  
+  /* background-image: url("../images/poster2@100.jpg");
+  background: #b0cfe9 no-repeat center center;
+  background-size: cover;
+  background-position-y: 0px;
+
+  background-attachment: fixed; */
 
   color: rgb(250, 235, 235);
 }
@@ -1164,6 +1173,10 @@ a.fn-item.active {
   #site-head {
     padding: 10% 0;
     height: 65%;
+    background-position-y: 50px;
+    background-color: rgb(192, 192, 192);
+    background-blend-mode: overlay;
+    background-size: cover;
   }
   #header-arrow {
     display: none;
