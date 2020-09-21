@@ -90,7 +90,8 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  /*font-family: 'Droid Serif', serif;*/
+  /* font-family: 'Mali', serif; */
+  /* letter-spacing: -1px; */
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
   line-height: 1.6em;
@@ -129,7 +130,8 @@ h6 {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bowlby One", sans-serif;
+  text-shadow: 2px 2px #27165893;
 }
 h3,
 h4,
@@ -138,30 +140,33 @@ h6 {
   text-rendering: optimizeLegibility;
   line-height: 120%;
   margin-top: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bowlby One", sans-serif;
   margin-bottom: 0%;
 }
 
 h1 {
   font-size: 5rem;
   line-height: 1.2em;
-  letter-spacing: -2px;
+  letter-spacing: 3px;
   text-indent: -3px;
 }
 
 h2 {
   font-size: 4rem;
   line-height: 1.2em;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
   text-indent: -2px;
+  text-transform: uppercase;
 }
 
 h3 {
   font-size: 3.5rem;
+  letter-spacing: 2px;
 }
 
 h4 {
   font-size: 3rem;
+  letter-spacing: 2px;
 }
 
 h5 {
@@ -186,6 +191,7 @@ a:hover {
 
 
 a.btn {
+  box-shadow: 1px 3px 2px #33093d9d;
   border: none;
   text-decoration: none;
   background-color:  #8d7373;
@@ -204,6 +210,7 @@ a.btn {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: lighter;
+  
 }
 
 .subscribe-btn {
@@ -508,8 +515,10 @@ ul li {
   margin-bottom: 0rem;
   text-align: center;
   color: #fff;
-  background: #b80135 no-repeat center center;
-  background-color: rgb(192, 192, 192);
+  background: #b80135 no-repeat center top;
+  /* background-color: rgb(95, 95, 95); */
+  /* background-color: #757575; */
+  background-color: #4e4030;
   background-blend-mode: overlay;
   background-size: cover;
   background-position-y: 0px;
@@ -555,6 +564,8 @@ ul li {
   width:auto;
   margin-left: 50%;
   transform: translateX(-50%);
+  /* -webkit-filter: drop-shadow(1px 3px 2px #33093d9d);
+  filter: drop-shadow(1px 3px 2px #33093d9d); */
 
 }
 
@@ -573,6 +584,7 @@ ul li {
   padding-bottom: 56.25%;
   margin-left: 50%;
   transform: translateX(-50%);
+  box-shadow: 2px 4px 5px #33093d9d;
 }
 
 .blog-description {
@@ -581,16 +593,18 @@ ul li {
   font-size: 3.5rem;
   line-height: 1.5em;
   font-weight: 800;
+  text-transform: none;
   font-family: "Gloria Hallelujah", cursive;
   letter-spacing: 0;
-  color: #fff;
-  text-shadow: 1px 2px 2px #2b2a2ab0;
-  -webkit-text-stroke: 0.1rem  #782828;
-  /* animation: blinker 2s linear infinite; */
+  color:#fff;
+  /* color:#fff; */
+  text-shadow: 1px 2px 1px #1a0f3ac5;
+  /* -webkit-text-stroke: 0.1rem  #782828; */
+  /* animation: blinker 3s linear infinite; */
 }
 @keyframes blinker {
   50% {
-    color: #fff;
+    opacity: 0;
   }
 }
 
@@ -636,20 +650,21 @@ ul li {
   position: relative;
 }
 .post-holder.odd {
-  background: #88746d;
+  background: #4e4030;
   
-  /* background-image: url("../images/poster2@100.jpg");
-  background: #b0cfe9 no-repeat center center;
+  background-image: url("../images/poster2@100.jpg");
+  background-blend-mode: overlay;
   background-size: cover;
-  background-position-y: 0px;
-
-  background-attachment: fixed; */
-
+  background-position-y: -200px;
+  
+  background-attachment: fixed;
+  
   color: rgb(250, 235, 235);
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
+  /* background: #88746d; */
   position: relative;
   width: 80%;
   max-width: 700px;
@@ -676,7 +691,8 @@ ul li {
   left: 0px;
   width: 100%;
   z-index: 99999;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Bowlby One", sans-serif;
+  letter-spacing: 0px;
   text-transform: uppercase;
   font-size: 1.5rem;
   /* min-height: 50px !important; */
@@ -1071,7 +1087,7 @@ a.fn-item.active {
     top: 0px;
     left: 0px;
     z-index: 99999;
-    background: #f2efe8;
+    background: #fff;
     width: 100%;
     text-align: center;
     padding: 4px;
@@ -1151,6 +1167,11 @@ a.fn-item.active {
   .post-holder {
     padding-top: 20px;
   }
+
+  .post-holder.odd {
+    background-position-y: 0px;
+  }
+
   #blog-logo img {
     max-height: 80px;
   }
@@ -1174,7 +1195,8 @@ a.fn-item.active {
     padding: 10% 0;
     height: 65%;
     background-position-y: 50px;
-    background-color: rgb(192, 192, 192);
+    /* background-color: #757575; */
+    background-color: #4e4030;
     background-blend-mode: overlay;
     background-size: cover;
   }
