@@ -702,6 +702,10 @@ ul li {
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.5)
 }
 
+.press-btn {
+  
+}
+
 
 .fixed-nav img {
   display: inline;
@@ -715,7 +719,7 @@ a.fn-item {
   display: inline;
   cursor: pointer;
   vertical-align: middle;
-  padding-left: 1%;;
+  padding-left: 2%;;
   opacity: 0.7;
 }
 .white {

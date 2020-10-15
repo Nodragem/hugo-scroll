@@ -6,6 +6,8 @@ var $post = $(".post");
 var $first = $(".post.first");
 var $last = $(".post.last");
 var $fnav = $(".fixed-nav");
+var $pkb = $(".press-btn");
+$pkb.remove();
 var $micon = $(".menu-icon");
 var $postholder = $(".post-holder");
 var $postafter = $(".post-after");
@@ -49,12 +51,14 @@ var $sitehead = $("#site-head");
       srcTo($first);
     });
 
+
     $(".post-title").each(function () {
       var t = $(this).text();
       var index = $(this).parents(".post-holder").index();
       $fnav.append(
         "<a class='fn-item' item_index='" + index + "'>" + t + "</a>"
       );
+      
       $(".fn-item").click(function () {
         var i = $(this).attr("item_index");
         var s = $(".post[item_index='" + i + "']");
@@ -67,6 +71,7 @@ var $sitehead = $("#site-head");
         );
       });
     });
+    $fnav.append($pkb);
     
     $micon.click(function () {
       $("html, body").animate(
@@ -78,7 +83,7 @@ var $sitehead = $("#site-head");
     });
 
     $(".post.last").next(".post-after").hide();
-    $(".fixed-nav").fadeIn("fast");
+    $fnav.fadeIn("fast");
 
     $post.each(function () {
             var f = $(this).offset().top;
